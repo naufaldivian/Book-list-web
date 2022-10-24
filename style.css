@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-image: url("wallpaper.jpg");
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    background-color: black;
+    opacity: 0.7;
+    z-index: -1;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+}
+
+/* h1, h2, form {
+    z-index: 2;
+    opacity: 1;
+} */
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'a1 a2 a3';
+}
+
+.middle {
+    grid-area: a2;
+}
+.left {
+    grid-area: a1;
+}
+.right {
+    grid-area: a3;
+}
+
+.middle, .left, .right {
+    background-color: azure;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px black;
+    border-radius: 10px;
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+    border: 1px black;
+    border-radius: 10px;
+    padding: 15px;
+}
+.input_section > h2 {
+    text-align: center;
+    color: black;
+    justify-content: center;
+}
+
+.input_section > form > .input {
+    margin: 8px 0;
+}
+.input_section > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+.input_section > form > button {
+    background-color: rgb(231, 138, 80);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+    align-items: center;
+    font-weight: bold;
+}
+
+.book_list > .book_item {
+    padding: 8px 16px 16px 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.book_list > .book_item > .action > button {
+    border: 0;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book_list > .book_item > .action > .green {
+    background-color: rgb(25, 223, 25);
+    color: white;
+}
+
+.book_list > .book_item > .action > .red {
+    background-color: rgb(232, 16, 16);
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        'a2'
+        'a1'
+        'a3';
+    }
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+}
